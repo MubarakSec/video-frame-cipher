@@ -128,4 +128,4 @@ Runs MixColumns invertibility, S-Box bijectivity, block roundtrip, avalanche, cr
 
 ## License
 
-Academic / coursework project. Not licensed for production use.
+MIT — see [LICENSE](LICENSE). Academic / coursework project; not intended for production secrecy.
