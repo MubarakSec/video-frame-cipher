@@ -18,7 +18,13 @@ Fixes from review:
 import wave
 import array
 
-THRESHOLD = 2  # excludes near-silence; see module docstring for the >>1 trick.
+THRESHOLD = 2
+
+__all__ = [
+    "WavAudio", "THRESHOLD",
+    "bytes_to_bits", "bits_to_bytes",
+    "embed", "extract",
+]
 
 
 # ---------------------------------------------------------------------------

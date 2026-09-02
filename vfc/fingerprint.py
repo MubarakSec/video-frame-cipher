@@ -14,8 +14,10 @@ carrier video; the password provides the actual secret entropy.
 
 import statistics
 
-GRID = 32     # normalized side length
-BLOCKS = 8    # blocks per side -> 64 blocks -> 64 bits
+GRID = 32
+BLOCKS = 8
+
+__all__ = ["fingerprint_from_gray", "GRID", "BLOCKS"]
 
 
 def _nearest_resize(gray, out_h, out_w):

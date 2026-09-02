@@ -27,9 +27,14 @@ therefore fails authentication.
 from . import keys
 
 VERSION = 2
-HEADER_LEN = 50          # bytes before ciphertext
+HEADER_LEN = 50
 TAG_LEN = 32
 MAGIC_LEN = 4
+
+__all__ = [
+    "VERSION", "HEADER_LEN", "TAG_LEN", "MAGIC_LEN",
+    "build", "read_header", "total_len", "verify_and_split",
+]
 
 
 def build(k_embed: bytes, k_auth: bytes, salt: bytes, iv: bytes,

@@ -124,6 +124,15 @@ def _build_sbox(seed: bytes):
 
 SBOX, INV_SBOX = _build_sbox(b"VFC-SBOX-v0.2")
 
+__all__ = [
+    "gmul", "MDS", "INV_MDS", "mat_mul_gf", "is_identity", "mds_is_invertible",
+    "SBOX", "INV_SBOX",
+    "encrypt_block", "decrypt_block",
+    "pkcs7_pad", "pkcs7_unpad",
+    "cbc_encrypt", "cbc_decrypt",
+    "ROUNDS",
+]
+
 
 # ---------------------------------------------------------------------------
 # State helpers  (16 bytes <-> 4x4 column-major grid, like AES)

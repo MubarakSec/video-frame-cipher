@@ -18,7 +18,11 @@ import time
 import tkinter as tk
 import webbrowser
 from tkinter import ttk, filedialog, messagebox
-import cv2
+
+try:
+    import cv2
+except ImportError:
+    cv2 = None
 
 # Ensure project root is in sys.path
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -75,6 +79,11 @@ def format_size(num_bytes: int) -> str:
 
 class VfcGuiApp(tk.Tk):
     def __init__(self):
+        if cv2 is None:
+            raise ImportError(
+                "opencv-python-headless is required for the GUI. "
+                "Install it with: pip install opencv-python-headless"
+            )
         super().__init__()
 
         self.title("VFC — Video Frame Cipher Studio (v0.2)")

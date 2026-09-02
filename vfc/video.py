@@ -19,6 +19,11 @@ import tempfile
 from .stego import WavAudio
 from . import core
 
+__all__ = [
+    "extract_frame_gray",
+    "encrypt_video", "decrypt_video",
+]
+
 
 def _run(cmd):
     subprocess.run(cmd, check=True,

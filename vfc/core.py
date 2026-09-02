@@ -20,8 +20,9 @@ from .prng import shuffled_positions
 from . import payload as payload_mod
 from .stego import WavAudio, embed, extract
 
-# Guard rail against a crafted header claiming an absurd ciphertext length.
 MAX_CIPHERTEXT = 64 * 1024 * 1024  # 64 MiB
+
+__all__ = ["encrypt", "decrypt", "MAX_CIPHERTEXT"]
 
 
 # ---------------------------------------------------------------------------

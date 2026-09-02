@@ -25,7 +25,8 @@ OUT_DIR = "/tmp/vfc_out"
 
 
 def sha(path):
-    return hashlib.sha256(open(path, "rb").read()).hexdigest()[:16]
+    with open(path, "rb") as f:
+        return hashlib.sha256(f.read()).hexdigest()[:16]
 
 
 def main():

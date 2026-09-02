@@ -34,6 +34,12 @@ import hmac
 # "an implementation parameter". Raise for real deployments.
 PBKDF2_ITERATIONS = 200_000
 
+__all__ = [
+    "PBKDF2_ITERATIONS",
+    "derive_k_embed", "derive_enc_auth", "expand_round_keys",
+    "compute_magic", "hmac_tag", "constant_time_eq",
+]
+
 
 def _kdf(password: bytes, info: bytes, salt: bytes = b"") -> bytes:
     """PBKDF2-HMAC-SHA256 -> 32 bytes. `info` is folded into the salt input."""

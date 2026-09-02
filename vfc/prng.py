@@ -16,6 +16,8 @@ Two decisions from review:
 
 import hashlib
 
+__all__ = ["KeyStream", "shuffled_positions"]
+
 
 class KeyStream:
     """Endless byte stream: SHA256(key || counter), counter = 0,1,2,..."""
