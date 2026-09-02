@@ -1,0 +1,44 @@
+{
+  "carrierVideo": {
+    "path": "/media/carrier_video.mp4",
+    "resolution": "1920x1080 (Full HD)",
+    "durationSec": 35.16,
+    "fps": 30,
+    "audioFormat": "PCM 16-bit 44.1kHz Stereo",
+    "previewAudioFormat": "AAC 44.1kHz Stereo",
+    "totalSamples": 3106816,
+    "eligibleSamples": 3094369,
+    "maxCapacityBytes": 386796
+  },
+  "secretImage": {
+    "originalName": "file_00000000423081f4888342360498b489.png",
+    "originalSize": 2163066,
+    "originalDimensions": "1448x1086 px",
+    "optimizedName": "secret_image.jpg",
+    "optimizedSize": 76904,
+    "optimizedDimensions": "720x540 px",
+    "path": "/media/secret_image.jpg",
+    "sha256": "42379c08a288fc10217270d6da20216d3f1780ebd2a94028a97f051f34128704"
+  },
+  "stegoParams": {
+    "frameNo": 464,
+    "frameImagePath": "/media/frame_0464.jpg",
+    "frameGrayPath": "/media/frame_0464_gray.jpg",
+    "frame32x32Path": "/media/frame_0464_32x32.png",
+    "fingerprintHex": "cdccc0cec6c6c6c6",
+    "passwordHint": "BlackRing-2028",
+    "payloadBytes": 76882,
+    "ciphertextBytes": 76800,
+    "usedSamples": 615056,
+    "capacityPct": 19.8766210493965
+  },
+  "cliEvidence": {
+    "stegoPath": "final_video/stego_carrier.mkv",
+    "sourcePath": "final_video/secret_image.jpg",
+    "storedRecoveredPath": "final_video/recovered/secret_image.jpg",
+    "outputPath": "final_video/recovered-cli",
+    "recoveredName": "secret_image.jpg",
+    "sourceSha256": "42379c08a288fc10217270d6da20216d3f1780ebd2a94028a97f051f34128704",
+    "storedRecoveredSha256": "42379c08a288fc10217270d6da20216d3f1780ebd2a94028a97f051f34128704"
+  }
+}

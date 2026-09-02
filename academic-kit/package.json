@@ -1,0 +1,35 @@
+{
+  "name": "academic-kit",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "predev": "npm run trace",
+    "dev": "vite",
+    "prebuild": "npm run trace",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint src",
+    "check": "npm run lint && npm run build && npm run compat",
+    "compat": "node scripts/check-vfc-compat.mjs",
+    "trace": "python3 ../generate_vfc_trace.py --output src/data/vfc-trace.ts",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/noto-kufi-arabic": "^5.3.0",
+    "@fontsource/noto-sans-arabic": "^5.3.0",
+    "framer-motion": "^13.1.0",
+    "lucide-react": "^1.31.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.4",
+    "oxlint": "^1.75.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0"
+  }
+}

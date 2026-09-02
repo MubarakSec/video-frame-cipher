@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Zip files
+*.zip
+
+# Guide documents (personal)
+STUDENT_PRESENTATION_GUIDE_AR.md
+VFC_CRYPTOGRAPHY_GUIDE_AR.md
+VFC_Specification_v0.2_AR.docx
+
+# Build/output directories
+_remotion_vfc_work/
+final_video/
+demonstrate/
+decrypted/
+
+# Academic kit large media
+academic-kit/public/media/*.mp4
+academic-kit/public/media/*.mkv
+academic-kit/exports/
